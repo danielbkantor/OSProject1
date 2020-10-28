@@ -2,16 +2,9 @@
 #include <iostream>
 #include <random>
 #include <queue>
-using namespace std;
+#include "FIFO.h"
 
-
-struct node{ //Struct to store the two random values in a container
-    node(long s, int m) : serviceTime(s), memorySize(m){}
-    long serviceTime;
-    int memorySize;
-};
-
- int main(){
+int main(){
     int scenario; // Prompt the user to choose a scenario
     cout << "Which scenario do you want to run?\n";
     cout << "Enter 1 for Scenario 1 \n";
@@ -34,17 +27,18 @@ struct node{ //Struct to store the two random values in a container
 
     mt19937_64 seed(seedValue); //Gets the seed value used for random number generation
     //Generate Service Times & Memory Requirements
-    uniform_int_distribution<long> values1(10000000,10000000000000);
+    uniform_int_distribution<long> values1(1000000,1000000000000);
     uniform_int_distribution<int> values2(1,8);
-    for (int i = 0; i < 40; i++) {//Generates the random service times and memory sizes for each of the 40 processes and puts them in a struct which is then put in a queue.
+    for (int i = 0; i < 4; i++) {//Generates the random service times and memory sizes for each of the 40 processes and puts them in a struct which is then put in a queue.
         long serviceTime = values1(seed);
         int memorySize = values2(seed);
+        cout << serviceTime << "\n" << memorySize << "\n";
         q.push(node(serviceTime, memorySize));  
     }
 
-    if(scenario == 1){ //All proccesses have a speed of 3Ghz and a memory of 3GB
+    if(scenario == 1){ //All proccesses have a speed of 3Ghz and a memory of 8GB
         if(algorithm == 1){
-
+            FIFO(q,3,3,3,3,8,8,8,8);
         }
         
         if(algorithm == 2){

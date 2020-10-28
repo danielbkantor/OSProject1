@@ -1,112 +1,123 @@
-#include <queue>
-#include <unistd.h>
-using namespace std;
+#include "FIFO.h"
+#include "processor1.h"
+#include "processor2.h"
+#include "processor3.h"
+#include "processor4.h"
+
 bool processorFull1 = false;
 bool processorFull2 = false;
 bool processorFull3 = false;
 bool processorFull4 = false;
+bool openProcessor = true;
 
 
-struct node{ //Struct to store the two random values in a container
-    node(long s, int m) : serviceTime(s), memorySize(m){}
-    long serviceTime;
-    int memorySize;
-};
-
-void processor1(int speed1, int sTime){
-    processorFull1 = true;
-    while(sTime != 0){
-        if(sTime > speed1 * 1,000,000,000){
-            usleep(1000000);
-            sTime = sTime - speed1 * 1,000,000,000;
-        }   
-        else{
-            int fraction = sTime/(speed1 * 1,000,000,000);
-            usleep(fraction * 1000000);
-            sTime = sTime - sTime;
-        }
-    }
-    processorFull1 = false;
-
-}
-
-void processor2(int speed2, int sTime){
-    processorFull2 = true;
-    while(sTime != 0){
-        if(sTime > speed2 * 1,000,000,000){
-            usleep(1000000);
-            sTime = sTime - speed2 * 1,000,000,000;
-        }   
-        else{
-            int fraction = sTime/(speed2 * 1,000,000,000);
-            usleep(fraction * 1000000);
-            sTime = sTime - sTime;
-        }
-    }
-    processorFull1 = false;
-}
-
-void processor3(int speed3, int sTime){
-    processorFull3 = true;
-    while(sTime != 0){
-        if(sTime > speed3 * 1,000,000,000){
-            usleep(1000000);
-            sTime = sTime - speed3 * 1,000,000,000;
-        }   
-        else{
-            int fraction = sTime/(speed3 * 1,000,000,000);
-            usleep(fraction * 1000000);
-            sTime = sTime - sTime;
-        }
-    }
-    processorFull1 = false;
-}
-
-void processor4(int speed4, int sTime){
-    while(sTime != 0){
-        if(sTime > speed4 * 1,000,000,000){
-            usleep(1000000);
-            sTime = sTime - speed4 * 1,000,000,000;
-        }   
-        else{
-            int fraction = sTime/(speed4 * 1,000,000,000);
-            usleep(fraction * 1000000);
-            sTime = sTime - sTime;
-        }
-    }
-    processorFull1 = false;
-}
-
-void FIFO(queue<node> processes, int speed1, int speed2, int speed3, int speed4, int memory1, int memory2, int memory3, int memory4){
+/*void FIFO(queue<node> processes, long speed1, long speed2, long speed3, long speed4, int memory1, int memory2, int memory3, int memory4){
     while(!processes.empty()){
-        node temp = processes.front();
-        int processServiceTime = temp.serviceTime;
-        int processMemorySize = temp.memorySize;
-        processes.pop();
+        if(openProcessor == true){
+            node temp = processes.front();
+            long processServiceTime = temp.serviceTime;
+            int processMemorySize = temp.memorySize;
+            processes.pop();
 
-        if(processorFull1 == false){
-            if(processMemorySize <= memory1){
-                processor1(speed1, processServiceTime);
-            }
-        }
-        else if(processorFull2 == false){
-          if(processMemorySize <= memory2){
-                processor2(speed2, processServiceTime);
-            } 
-        }
-        else if(processorFull3 == false){
-            if(processMemorySize <= memory3){
-                processor2(speed3, processServiceTime);
-            }
-        }
-        else if(processorFull4 == false){
-            if(processMemorySize >= memory4){
-                processor2(speed4, processServiceTime);
-            }
-        }
-        else{
+            if(processorFull1 == false){
+                if(processMemorySize <= memory1){
+                    processorFull1 = true;
+                    processor1(speed1, processServiceTime);
+                    processorFull1 = false;
 
+                }
+            }
+            else if(processorFull2 == false){
+                if(processMemorySize <= memory2){
+                    processorFull2 = true;
+                    processor2(speed2, processServiceTime);
+                    processorFull2 = false;
+
+                } 
+            }
+            else if(processorFull3 == false){
+                if(processMemorySize <= memory3){
+                    processorFull3 = true;
+                    processor3(speed3, processServiceTime);
+                    processorFull3 = false;
+
+                }
+            }
+            else if(processorFull4 == false){
+                if(processMemorySize >= memory4){
+                    processorFull4 = true;
+                    processor4(speed4, processServiceTime);
+                    processorFull4 = false;
+                }
+            }
+            else{
+
+            }
         }
     }
 }
+*/
 
+void FIFO(queue<node> processes, long speed1, long speed2, long speed3, long speed4, int memory1, int memory2, int memory3, int memory4){
+    int pid1, pid2, pid3, pid4;
+
+    while(!processes.empty()){
+        if(processorFull1 == true && processorFull2 == true && processorFull3 == true && processorFull4 == true){
+            openProcessor = false;
+        }
+        else{
+            openProcessor = true;
+        }
+        if(openProcessor == true){
+            node temp = processes.front();
+            long processServiceTime = temp.serviceTime;
+            int processMemorySize = temp.memorySize;
+            processes.pop();
+            pid1 = fork();
+            if(pid1 == 0){
+                if(processorFull1 == false){
+                    if(processMemorySize <= memory1){
+                        processorFull1 = true;
+                        processor1(speed1, processServiceTime);
+                        processorFull1 = false;
+                    }
+                }
+            }
+            else{
+                pid2 = fork();
+                if(pid2 == 0){
+                    if(processorFull2 == false){
+                         if(processMemorySize <= memory2){
+                             processorFull2 = true;
+                             processor2(speed2, processServiceTime);
+                             processorFull2 = false;
+
+                         } 
+                    }
+                }
+                else{
+                    pid3 = fork();
+                    if(pid3 == 0){
+                        if(processorFull3 == false){
+                            if(processMemorySize <= memory3){
+                              processorFull3 = true;
+                              processor3(speed3, processServiceTime);
+                              processorFull3 = false;
+
+                            }   
+                        }       
+                    }   
+                    else{
+                        if(processorFull4 == false){
+                            if(processMemorySize >= memory4){
+                                processorFull4 = true;
+                                processor4(speed4, processServiceTime);
+                                processorFull4 = false;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
