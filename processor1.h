@@ -3,8 +3,9 @@
 
 #include <unistd.h>
 #include <iostream>
+#include "struct.h"
 using namespace std;
 
-void processor1(long speed1, long sTIme);
+data processor1(long speed1, long sTime, int processID);
 
 #endif
