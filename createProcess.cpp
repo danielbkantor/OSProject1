@@ -6,6 +6,7 @@
 #include "SJF.h"
 #include "struct.h"
 
+
 int main(){
 
     int scenario; // Prompt the user to choose a scenario
@@ -137,15 +138,15 @@ int main(){
         }
         
         if(algorithm == 2){
-            priority_queue<priorityNode> pq;//Priority queue to store each struct in
+            queue<node> q;//Priority queue to store each struct in
             for (int i = 0; i < 40; i++) {//Generates the random service times and memory sizes for each of the 40 processes and puts them in a struct which is then put in a min priority queue
                 long serviceTime = values1(seed);
                 int memorySize = values2(seed);
                 int processID = (i+1);
                 cout << serviceTime << "\n" << memorySize << "\n";
-                pq.push(priorityNode(serviceTime, memorySize, processID));  
+                q.push(node(serviceTime, memorySize, processID));  
             }
-            SJF(pq,3,3,3,3,8,8,8,8,4);
+            FIFO(q,3,3,3,3,8,8,8,8,4);
         }
     }
 }
