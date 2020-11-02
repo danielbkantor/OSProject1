@@ -1,0 +1,245 @@
+Scenario 3 
+Total Turnaround time is 7172943895573 cycles 
+
+ID Number: 28
+Service Time: 14026660878 cycles
+Memory Requirements: 4GB 
+Wait Time: 0 cycles 
+Total Time: 14026660878 cycles 
+
+ID Number: 20
+Service Time: 38439113324 cycles
+Memory Requirements: 3GB 
+Wait Time: 0 cycles 
+Total Time: 38439113324 cycles 
+
+ID Number: 31
+Service Time: 84577591320 cycles
+Memory Requirements: 1GB 
+Wait Time: 0 cycles 
+Total Time: 84577591320 cycles 
+
+ID Number: 6
+Service Time: 89454106715 cycles
+Memory Requirements: 5GB 
+Wait Time: 0 cycles 
+Total Time: 89454106715 cycles 
+
+ID Number: 14
+Service Time: 119354076881 cycles
+Memory Requirements: 1GB 
+Wait Time: 14026660878 cycles 
+Total Time: 133380737759 cycles 
+
+ID Number: 1
+Service Time: 133877513913 cycles
+Memory Requirements: 2GB 
+Wait Time: 38439113324 cycles 
+Total Time: 172316627237 cycles 
+
+ID Number: 32
+Service Time: 134166215668 cycles
+Memory Requirements: 2GB 
+Wait Time: 89454106715 cycles 
+Total Time: 223620322383 cycles 
+
+ID Number: 29
+Service Time: 183250275239 cycles
+Memory Requirements: 1GB 
+Wait Time: 84577591320 cycles 
+Total Time: 267827866559 cycles 
+
+ID Number: 18
+Service Time: 190357924013 cycles
+Memory Requirements: 5GB 
+Wait Time: 223620322383 cycles 
+Total Time: 413978246396 cycles 
+
+ID Number: 30
+Service Time: 191903724021 cycles
+Memory Requirements: 1GB 
+Wait Time: 133380737759 cycles 
+Total Time: 325284461780 cycles 
+
+ID Number: 38
+Service Time: 246053413073 cycles
+Memory Requirements: 8GB 
+Wait Time: 172316627237 cycles 
+Total Time: 418370040310 cycles 
+
+ID Number: 11
+Service Time: 286042537381 cycles
+Memory Requirements: 6GB 
+Wait Time: 267827866559 cycles 
+Total Time: 553870403940 cycles 
+
+ID Number: 9
+Service Time: 291865376897 cycles
+Memory Requirements: 7GB 
+Wait Time: 413978246396 cycles 
+Total Time: 705843623293 cycles 
+
+ID Number: 13
+Service Time: 321759789256 cycles
+Memory Requirements: 1GB 
+Wait Time: 325284461780 cycles 
+Total Time: 647044251036 cycles 
+
+ID Number: 3
+Service Time: 350898772785 cycles
+Memory Requirements: 8GB 
+Wait Time: 705843623293 cycles 
+Total Time: 1056742396078 cycles 
+
+ID Number: 8
+Service Time: 418669122503 cycles
+Memory Requirements: 2GB 
+Wait Time: 553870403940 cycles 
+Total Time: 972539526443 cycles 
+
+ID Number: 2
+Service Time: 451215465360 cycles
+Memory Requirements: 1GB 
+Wait Time: 418370040310 cycles 
+Total Time: 869585505670 cycles 
+
+ID Number: 12
+Service Time: 458125106022 cycles
+Memory Requirements: 3GB 
+Wait Time: 1056742396078 cycles 
+Total Time: 1514867502100 cycles 
+
+ID Number: 4
+Service Time: 470752675020 cycles
+Memory Requirements: 1GB 
+Wait Time: 647044251036 cycles 
+Total Time: 1117796926056 cycles 
+
+ID Number: 10
+Service Time: 474594344482 cycles
+Memory Requirements: 3GB 
+Wait Time: 972539526443 cycles 
+Total Time: 1447133870925 cycles 
+
+ID Number: 23
+Service Time: 506688668816 cycles
+Memory Requirements: 8GB 
+Wait Time: 1514867502100 cycles 
+Total Time: 2021556170916 cycles 
+
+ID Number: 22
+Service Time: 520485549310 cycles
+Memory Requirements: 1GB 
+Wait Time: 869585505670 cycles 
+Total Time: 1390071054980 cycles 
+
+ID Number: 17
+Service Time: 529937794753 cycles
+Memory Requirements: 4GB 
+Wait Time: 1447133870925 cycles 
+Total Time: 1977071665678 cycles 
+
+ID Number: 27
+Service Time: 550787076146 cycles
+Memory Requirements: 6GB 
+Wait Time: 2021556170916 cycles 
+Total Time: 2572343247062 cycles 
+
+ID Number: 37
+Service Time: 564559838702 cycles
+Memory Requirements: 4GB 
+Wait Time: 1117796926056 cycles 
+Total Time: 1682356764758 cycles 
+
+ID Number: 5
+Service Time: 569847594933 cycles
+Memory Requirements: 6GB 
+Wait Time: 2572343247062 cycles 
+Total Time: 3142190841995 cycles 
+
+ID Number: 40
+Service Time: 597058789185 cycles
+Memory Requirements: 5GB 
+Wait Time: 1977071665678 cycles 
+Total Time: 2574130454863 cycles 
+
+ID Number: 24
+Service Time: 608704536959 cycles
+Memory Requirements: 8GB 
+Wait Time: 1390071054980 cycles 
+Total Time: 1998775591939 cycles 
+
+ID Number: 39
+Service Time: 660952696092 cycles
+Memory Requirements: 5GB 
+Wait Time: 3142190841995 cycles 
+Total Time: 3803143538087 cycles 
+
+ID Number: 15
+Service Time: 694761239832 cycles
+Memory Requirements: 6GB 
+Wait Time: 1682356764758 cycles 
+Total Time: 2377118004590 cycles 
+
+ID Number: 36
+Service Time: 763556843656 cycles
+Memory Requirements: 8GB 
+Wait Time: 2574130454863 cycles 
+Total Time: 3337687298519 cycles 
+
+ID Number: 35
+Service Time: 764918058218 cycles
+Memory Requirements: 6GB 
+Wait Time: 3803143538087 cycles 
+Total Time: 4568061596305 cycles 
+
+ID Number: 7
+Service Time: 789652202134 cycles
+Memory Requirements: 2GB 
+Wait Time: 1998775591939 cycles 
+Total Time: 2788427794073 cycles 
+
+ID Number: 16
+Service Time: 790205763009 cycles
+Memory Requirements: 4GB 
+Wait Time: 3337687298519 cycles 
+Total Time: 4127893061528 cycles 
+
+ID Number: 26
+Service Time: 795708307748 cycles
+Memory Requirements: 4GB 
+Wait Time: 4568061596305 cycles 
+Total Time: 5363769904053 cycles 
+
+ID Number: 25
+Service Time: 872322656903 cycles
+Memory Requirements: 2GB 
+Wait Time: 2377118004590 cycles 
+Total Time: 3249440661493 cycles 
+
+ID Number: 21
+Service Time: 885304696424 cycles
+Memory Requirements: 3GB 
+Wait Time: 5363769904053 cycles 
+Total Time: 6249074600477 cycles 
+
+ID Number: 19
+Service Time: 888420449101 cycles
+Memory Requirements: 3GB 
+Wait Time: 4127893061528 cycles 
+Total Time: 5016313510629 cycles 
+
+ID Number: 33
+Service Time: 911262677519 cycles
+Memory Requirements: 5GB 
+Wait Time: 2788427794073 cycles 
+Total Time: 3699690471592 cycles 
+
+ID Number: 34
+Service Time: 923869295096 cycles
+Memory Requirements: 1GB 
+Wait Time: 6249074600477 cycles 
+Total Time: 7172943895573 cycles 
+
+Average wait time is: 1526009284250 cycles 
+Average turnaround time is: 2004468997732 cycles
